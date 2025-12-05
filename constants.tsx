@@ -6,7 +6,7 @@ export const HERO_HEADLINE = "Elimine a Insegurança e Comece a Atender em 7 Dia
 export const HERO_SUBHEADLINE = "O método definitivo para Neuro/Psicopedagogos recém-formados: Acabe com a burocracia, garanta segurança jurídica e conquiste sua independência profissional.";
 
 export const VIDEO_PLACEHOLDER_URL = "https://picsum.photos/id/180/1280/720"; // Replace with actual video thumbnail/embed
-export const MARCIA_IMAGE_URL = "https://picsum.photos/id/64/800/800"; // Placeholder for 'marcia02.jpeg' - Woman in business attire
+export const MARCIA_IMAGE_URL = "/images/marcia02.jpeg";
 export const LOGO_BG_URL = "https://picsum.photos/id/452/1920/1080"; // Placeholder for 'ML03.png' - Texture background
 
 export const COURSE_MODULES: ModuleItem[] = [
