@@ -43,7 +43,7 @@ const App: React.FC = () => {
           <div className="max-w-3xl mx-auto mb-12 shadow-2xl rounded-2xl overflow-hidden border-4 border-white">
             <div className="aspect-video bg-black relative flex items-center justify-center group cursor-pointer">
               {/* This represents the VSL */}
-              <img src={VIDEO_PLACEHOLDER_URL} alt="Vídeo de Apresentação" className="w-full h-full object-cover opacity-80" />
+              <img src={VIDEO_PLACEHOLDER_URL} alt="Vídeo de Apresentação" className="w-full h-full object-cover opacity-80" fetchPriority="high" />
               <div className="absolute inset-0 flex items-center justify-center">
                  <div className="w-20 h-20 bg-brand-500/90 rounded-full flex items-center justify-center pl-1 shadow-xl group-hover:scale-110 transition-transform">
                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[24px] border-l-white border-b-[12px] border-b-transparent"></div>
