@@ -45,8 +45,8 @@ const App: React.FC = () => {
               {/* This represents the VSL */}
               <img src={VIDEO_PLACEHOLDER_URL} alt="Vídeo de Apresentação" className="w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="w-20 h-20 bg-brand-500/90 rounded-full flex items-center justify-center pl-2 shadow-xl group-hover:scale-110 transition-transform">
-                   <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[24px] border-l-white border-b-[12px] border-b-transparent ml-2"></div>
+                 <div className="w-20 h-20 bg-brand-500/90 rounded-full flex items-center justify-center pl-1 shadow-xl group-hover:scale-110 transition-transform">
+                   <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[24px] border-l-white border-b-[12px] border-b-transparent"></div>
                  </div>
               </div>
             </div>
@@ -125,12 +125,11 @@ const App: React.FC = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
-             <div className="inline-flex items-center gap-2 bg-brand-700 px-6 py-3 rounded-full text-brand-100 text-sm font-semibold mb-8 border border-brand-600">
+          <div className="mt-16 flex flex-col items-center space-y-4">
+             <div className="inline-flex items-center gap-2 bg-brand-700 px-6 py-3 rounded-full text-brand-100 text-sm font-semibold border border-brand-600">
                 <Star className="w-4 h-4 text-nobel-gold fill-nobel-gold" />
                 Arquivos 100% editáveis (Word) + PDF pronto para imprimir
              </div>
-             <br />
              <Button variant="outline" className="text-white border-brand-200 hover:bg-brand-200 hover:text-brand-900">
                Quero Garantir Meu Kit
              </Button>
