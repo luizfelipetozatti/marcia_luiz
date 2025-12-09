@@ -218,7 +218,7 @@ const App: React.FC = () => {
                   {/* PLEASE REPLACE WITH ACTUAL IMAGE: marcia02.jpeg */}
                   <img src={MARCIA_IMAGE_URL} alt="Márcia Luiz" className="w-full h-full object-cover" />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-brand-800 text-white p-4 rounded-xl shadow-lg max-w-xs hidden md:block">
+                <div className="absolute -bottom-6 -right-6 bg-brand-800 text-white p-4 rounded-xl shadow-lg max-w-xs">
                   <p className="font-serif text-2xl font-medium text-nobel-gold">5+</p>
                   <p className="text-sm opacity-90">Livros publicados e premiados</p>
                 </div>
