@@ -56,7 +56,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <Button onClick={scrollToPricing} className="mx-auto bg-green-500 text-white hover:bg-green-600 shadow-green-500/30 shadow-xl text-lg font-semibold">
+            <Button 
+              onClick={() => window.location.href = 'https://pay.kiwify.com.br/7AhVP2s'} 
+              className="mx-auto bg-green-500 text-white hover:bg-green-600 shadow-green-500/30 shadow-xl text-lg font-semibold"
+            >
               Quero Começar Agora
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -174,7 +177,11 @@ const App: React.FC = () => {
                 <Star className="w-4 h-4 text-nobel-gold fill-nobel-gold" />
                 Arquivos 100% editáveis (Word) + PDF pronto para imprimir
              </div>
-             <Button variant="outline" className="bg-green-500 text-white border-green-400 hover:bg-green-600 hover:text-white font-semibold shadow-lg shadow-green-500/20">
+             <Button 
+               variant="outline" 
+               onClick={() => window.location.href = 'https://pay.kiwify.com.br/7AhVP2s'}
+               className="bg-green-500 text-white border-green-400 hover:bg-green-600 hover:text-white font-semibold shadow-lg shadow-green-500/20"
+             >
                Quero Garantir Meu Kit
              </Button>
           </div>
@@ -323,7 +330,12 @@ const App: React.FC = () => {
               <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-3 text-center">
                 <p className="text-yellow-800 font-bold text-sm">⚡ Apenas 47 vagas disponíveis este mês</p>
               </div>
-              <Button variant="primary" fullWidth className="bg-green-500 text-white hover:bg-green-600 text-xl shadow-xl shadow-green-500/40 animate-pulse font-bold">
+              <Button 
+                variant="primary" 
+                fullWidth 
+                onClick={() => window.location.href = 'https://pay.kiwify.com.br/7AhVP2s'}
+                className="bg-green-500 text-white hover:bg-green-600 text-xl shadow-xl shadow-green-500/40 animate-pulse font-bold"
+              >
                 GARANTIR MINHA VAGA AGORA
               </Button>
             </div>
