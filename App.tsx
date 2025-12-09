@@ -55,49 +55,90 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <Button onClick={scrollToPricing} className="mx-auto shadow-brand-500/30">
-            Quero Começar Agora
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <div className="flex flex-col items-center gap-3">
+            <Button onClick={scrollToPricing} className="mx-auto bg-green-500 text-white hover:bg-green-600 shadow-green-500/30 shadow-xl text-lg font-semibold">
+              Quero Começar Agora
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+            <p className="text-sm text-brand-600 flex items-center gap-2">
+              <Lock className="w-4 h-4" />
+              Acesso imediato • Garantia de 7 dias
+            </p>
+          </div>
         </div>
       </header>
 
       {/* Pain & Agitation */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="font-serif text-3xl md:text-4xl font-normal text-brand-900 mb-6">
-                O diploma está na mão, mas o medo de começar te paralisa?
-              </h2>
-              <div className="space-y-4 text-brand-700 text-lg">
-                <p>
-                  Eu sei exatamente como é. Você estudou anos, se especializou, mas na hora de abrir a porta do consultório, surge a dúvida: 
-                  <span className="italic font-medium text-brand-800"> "E se eu errar no contrato? E se eu não souber quanto cobrar?"</span>
-                </p>
-                <p>
-                  Muitas profissionais adiam o sonho da clínica por pura insegurança burocrática. O medo da papelada vira um muro entre você e seus pacientes.
-                </p>
-                <div className="p-6 bg-brand-50 border-l-4 border-nobel-gold rounded-r-lg mt-8">
-                  <p className="font-medium italic text-brand-800">
-                    "O novo assusta, dá medo — mas não existe conquista sem partida. O Protocolo Essencial é a ponte segura que faltava."
-                  </p>
-                </div>
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-5xl font-normal text-brand-900 mb-4">
+              O diploma está na mão, mas o medo de começar te paralisa?
+            </h2>
+            <p className="text-xl text-brand-600 max-w-3xl mx-auto">
+              Você estudou anos, se especializou, mas na hora de abrir a porta do consultório, surge a dúvida...
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
+            {/* Sem o Protocolo */}
+            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl">✕</div>
+                <h3 className="font-serif text-2xl font-medium text-red-900">Sem Direção</h3>
               </div>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-red-800">
+                  <span className="text-red-500 mt-1">✕</span>
+                  <span>Medo de errar no contrato e ter problemas jurídicos</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-800">
+                  <span className="text-red-500 mt-1">✕</span>
+                  <span>Insegurança sobre quanto cobrar por sessão</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-800">
+                  <span className="text-red-500 mt-1">✕</span>
+                  <span>Perder tempo criando documentos do zero</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-800">
+                  <span className="text-red-500 mt-1">✕</span>
+                  <span>Adiar o sonho por insegurança burocrática</span>
+                </li>
+              </ul>
             </div>
-            <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
-               {/* Visual representation of "Confusion" vs "Clarity" */}
-               <div className="bg-brand-100 rounded-2xl p-6 h-64 flex flex-col justify-center items-center text-center transform translate-y-8">
-                  <span className="text-4xl mb-4">😫</span>
-                  <span className="font-serif font-medium text-brand-800">Insegurança</span>
-                  <span className="text-sm text-brand-600 mt-2">Medo de errar juridicamente</span>
-               </div>
-               <div className="bg-brand-800 text-brand-50 rounded-2xl p-6 h-64 flex flex-col justify-center items-center text-center shadow-xl">
-                  <span className="text-4xl mb-4 text-nobel-gold">✨</span>
-                  <span className="font-serif font-medium text-white">Confiança</span>
-                  <span className="text-sm text-brand-200 mt-2">Tudo pronto para atender</span>
-               </div>
+
+            {/* Com o Protocolo */}
+            <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">✓</div>
+                <h3 className="font-serif text-2xl font-medium text-green-900">Com Segurança</h3>
+              </div>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-green-800">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-1 shrink-0" />
+                  <span>Contratos validados juridicamente prontos para usar</span>
+                </li>
+                <li className="flex items-start gap-3 text-green-800">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-1 shrink-0" />
+                  <span>Estratégia de precificação com previsibilidade</span>
+                </li>
+                <li className="flex items-start gap-3 text-green-800">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-1 shrink-0" />
+                  <span>Todos os documentos editáveis em minutos</span>
+                </li>
+                <li className="flex items-start gap-3 text-green-800">
+                  <CheckCircle2 className="w-5 h-5 text-green-500 mt-1 shrink-0" />
+                  <span>Começar a atender em até 7 dias com confiança</span>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-brand-50 to-brand-100 border-l-4 border-nobel-gold rounded-r-2xl p-8 max-w-3xl mx-auto">
+            <p className="font-serif text-2xl font-medium italic text-brand-900 text-center">
+              "O novo assusta, dá medo — mas não existe conquista sem partida. O Protocolo Essencial é a ponte segura que faltava."
+            </p>
+            <p className="text-center text-brand-600 mt-4 font-medium">— Márcia Luiz</p>
           </div>
         </div>
       </section>
@@ -118,7 +159,10 @@ const App: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {KIT_ITEMS.map((item, index) => (
-              <div key={index} className="bg-brand-900/50 backdrop-blur-sm border border-brand-700 p-6 rounded-xl hover:bg-brand-700 transition-colors group">
+              <div key={index} className="bg-brand-900/50 backdrop-blur-sm border border-brand-700 p-6 rounded-xl hover:bg-brand-700 transition-all duration-300 group relative overflow-hidden">
+                <div className="absolute top-3 right-3 w-8 h-8 bg-nobel-gold/20 rounded-full flex items-center justify-center">
+                  <span className="text-nobel-gold font-bold text-sm">{index + 1}</span>
+                </div>
                 <CheckCircle2 className="w-8 h-8 text-nobel-gold mb-4 group-hover:scale-110 transition-transform" />
                 <p className="font-medium font-serif text-lg leading-snug">{item}</p>
               </div>
@@ -130,7 +174,7 @@ const App: React.FC = () => {
                 <Star className="w-4 h-4 text-nobel-gold fill-nobel-gold" />
                 Arquivos 100% editáveis (Word) + PDF pronto para imprimir
              </div>
-             <Button variant="outline" className="text-white border-brand-200 hover:bg-brand-200 hover:text-brand-900">
+             <Button variant="outline" className="bg-green-500 text-white border-green-400 hover:bg-green-600 hover:text-white font-semibold shadow-lg shadow-green-500/20">
                Quero Garantir Meu Kit
              </Button>
           </div>
@@ -248,12 +292,12 @@ const App: React.FC = () => {
             </div>
 
             <div className="mb-8">
-               <p className="text-brand-500 font-semibold mb-2 line-through text-lg">De R$ 297,00</p>
+               <p className="text-rose-700 font-semibold mb-2 line-through text-lg">De R$ 297,00</p>
                <div className="flex justify-center items-end gap-2">
                  <span className="text-2xl font-bold mb-4">Por apenas</span>
                  <span className="text-6xl md:text-7xl font-serif font-medium text-brand-800">12x R$ 14,90</span>
                </div>
-               <p className="text-brand-600 font-medium mt-2">ou R$ 149,00 à vista</p>
+               <p className="text-green-600 font-bold text-xl mt-2">ou R$ 149,00 à vista</p>
             </div>
 
             <div className="space-y-4 mb-10 text-left max-w-sm mx-auto">
@@ -275,9 +319,14 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            <Button fullWidth className="text-xl shadow-xl shadow-brand-500/20 animate-pulse">
-              QUERO O PROTOCOLO AGORA
-            </Button>
+            <div className="space-y-4">
+              <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl p-3 text-center">
+                <p className="text-yellow-800 font-bold text-sm">⚡ Apenas 47 vagas disponíveis este mês</p>
+              </div>
+              <Button variant="primary" fullWidth className="bg-green-500 text-white hover:bg-green-600 text-xl shadow-xl shadow-green-500/40 animate-pulse font-bold">
+                GARANTIR MINHA VAGA AGORA
+              </Button>
+            </div>
             
             <p className="text-xs text-brand-400 mt-6 flex items-center justify-center gap-1">
               <Lock className="w-3 h-3" /> Pagamento 100% Seguro
